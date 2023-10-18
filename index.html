@@ -3,454 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Sacramento:400"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Playfair+Display&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      h1 {
+        font-family: "Playfair Display", serif;
       }
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: black;
-        color: #c9c6c1;
+      h2 {
+        font-family: "Orbitron", sans-serif;
       }
-      header {
-        align-items: center;
-        display: flex;
-        background-color: #151718;
-        height: 46px;
-        justify-content: space-between;
+      /* Style the main scrollbar */
+      body::-webkit-scrollbar {
+        width: 12px;
       }
-      .lhead {
-        display: flex;
-        margin-left: 120px;
-      }
-      .rhead {
-        display: flex;
-        margin-right: 190px;
-      }
-      .item {
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-      .item:hover {
-        color: #d78110;
-      }
-      .logo {
-        font-family: "Sacramento", sans-serif;
-      }
-      section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .part1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url(https://cdna.artstation.com/p/assets/images/images/001/171/954/large/lownine-sp45.jpg?1441543882);
-        height: 574px;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-      #logo2 {
-        font-size: 120px;
-        margin-top: 100px;
-        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-          0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-        color: #fff6a9;
-        font-family: "Sacramento", sans-serif;
-        text-align: center;
-        animation: blink 8s infinite;
-        -webkit-animation: blink 8s infinite;
-      }
-      @-webkit-keyframes blink {
-        20%,
-        24%,
-        55% {
-          color: #111;
-          text-shadow: none;
-        }
 
-        0%,
-        19%,
-        21%,
-        23%,
-        25%,
-        54%,
-        56%,
-        100% {
-          /*     color: #fccaff;
-          text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-            0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-          text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-            0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00,
-            0 0 98px #ff0000;
-          color: #fff6a9;
-        }
-      }
-      @keyframes blink {
-        20%,
-        24%,
-        55% {
-          color: #111;
-          text-shadow: none;
-        }
-
-        0%,
-        19%,
-        21%,
-        23%,
-        25%,
-        54%,
-        56%,
-        100% {
-          /*     color: #fccaff;
-          text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-            0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-          text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
-            0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00,
-            0 0 98px #ff0000;
-          color: #fff6a9;
-        }
-      }
-      #logotext {
-        color: #ffe5c6;
-        font-weight: lighter;
-        margin-top: 40px;
-        font-size: 60px;
-        font-style: italic;
-        font-family: "Sacramento", sans-serif;
-        background-color: #67676723;
-      }
-      button {
-        transition: all 0.5s ease;
-        color: #fff;
-        border: 3px solid white;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 1;
-        font-size: 17px;
-        padding: 10px;
-        outline: none;
-        border-radius: 4px;
-        background-color: #fd8e0f;
-      }
-      button:hover {
-        border: 3px solid #fd8e0f;
-        color: #fff;
-        background-color: transparent;
-      }
-      #join {
-        margin-top: 75px;
-      }
-      .part2 {
-        margin-top: 80px;
-        display: flex;
-      }
-      .p2item {
-        width: 390px;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-      .p2item img {
-        margin-bottom: 40px;
-      }
-      .p2item h2 {
-        margin-bottom: 20px;
-      }
-      .p2item p {
-        margin-bottom: 80px;
-      }
-      .part3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #1e2122;
-        width: 100%;
-      }
-      .part3 h1 {
-        margin-top: 80px;
-        font-size: 34px;
-      }
-      .part3 p {
-        margin-top: 20px;
-        margin-bottom: 80px;
-        font-weight: lighter;
-      }
-      .container {
-        height: 460px;
-        width: 600px;
-        top: 60px;
-        left: calc(50% - 300px);
-        display: flex;
-      }
-      .card {
-        display: flex;
-        height: 290px;
-        width: 200px;
-        background-color: #17141d;
+      /* Style the thumb (the draggable part) */
+      body::-webkit-scrollbar-thumb {
+        background: #f1f1f1;
         border-radius: 10px;
-        box-shadow: -1rem 0 3rem #000;
-        /*   margin-left: -50px; */
-        transition: 0.4s ease-out;
-        position: relative;
-        left: 0px;
       }
-      .card:not(:first-child) {
-        margin-left: -50px;
-      }
-      .card:hover {
-        transform: translateY(-20px);
-        transition: 0.4s ease-out;
-      }
-      .card:hover ~ .card {
-        position: relative;
-        left: 50px;
-        transition: 0.4s ease-out;
-      }
-      .title {
-        color: white;
-        font-weight: 300;
-        position: absolute;
-        left: 20px;
-        top: 15px;
-      }
-      .bar {
-        position: absolute;
-        top: 100px;
-        left: 20px;
-        height: 5px;
-        width: 150px;
-      }
-      .emptybar {
-        background-color: #2e3033;
-        width: 100%;
-        height: 100%;
-      }
-      .filledbar {
-        position: absolute;
-        top: 0px;
-        z-index: 3;
-        width: 0px;
-        height: 100%;
-        background: rgb(0, 154, 217);
-        background: linear-gradient(
-          90deg,
-          rgba(0, 154, 217, 1) 0%,
-          rgba(217, 147, 0, 1) 65%,
-          rgba(255, 186, 0, 1) 100%
-        );
-        transition: 0.6s ease-out;
-      }
-      .card:hover .filledbar {
-        width: 120px;
-        transition: 0.4s ease-out;
-      }
-      .circle {
-        position: absolute;
-        top: 150px;
-        left: calc(50% - 60px);
-      }
-      .stroke {
-        stroke: white;
-        stroke-dasharray: 360;
-        stroke-dashoffset: 360;
-        transition: 0.6s ease-out;
-      }
-      svg {
-        fill: #17141d;
-        stroke-width: 2px;
-      }
-      .card:hover .stroke {
-        stroke-dashoffset: 100;
-        transition: 0.6s ease-out;
-      }
-      .part4 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url(https://images.hdqwalls.com/wallpapers/hoodium-neon-4b.jpg);
-        height: 690px;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-      }
-      .part4 h2 {
-        margin-top: 250px;
-        font-size: 34px;
-        color: #fff;
-        margin-bottom: 60px;
-      }
-      .part4 p {
-        color: white;
-        text-align: center;
-        line-height: 25px;
-      }
-      .part4 button {
-        margin-top: 40px;
-        background-color: #850ffd;
-      }
-      .part4 button:hover {
-        border: 3px solid #850ffd;
-        color: #fff;
-        background-color: transparent;
-      }
-      footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #fff;
-        background-color: #1e2122;
-      }
-      footer p {
-        margin-top: 25px;
-        margin-bottom: 20px;
-        text-align: center;
+
+      /* Style the track (the part that is not draggable) */
+      body::-webkit-scrollbar-track {
+        background: #1a1a1a;
       }
     </style>
+    <title>V.S.D.</title>
   </head>
-  <body>
-    <header>
-      <div class="lhead">
-        <div class="item logo">Loot</div>
-        <div class="item">By Loot pvt ltd</div>
-        <div class="item">LOOTBAZAAR</div>
+  <body
+    class="bg-black text-stone-200 box-border select-none"
+  >
+  <!-- bg-gradient-to-r from-[#141e30] to-[#243b55] -->
+    <section
+      class="h-screen w-full bg-[url('/img/portal.jpg')] bg-cover bg-center bg-fixed scroll-smooth"
+    >
+      <header class="flex justify-between p-4">
+        <div class="w-[10%] sm:w-[5%] lg:w-[4%] xl:w-[3%] cursor-crosshair">
+          <img class="w-full" src="img/v_white.png" alt="logo" />
+        </div>
+        <div class="my-auto">
+          <button
+            class="bg-transparent hover:bg-teal-500 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded-full cursor-not-allowed"
+          >
+            LOG
+          </button>
+        </div>
+      </header>
+      <div
+        class="flex flex-col items-center mt-52 mb-80 xl:mt-44 "
+      >
+        <h1 class="text-6xl text-emerald-400 md:text-6xl lg:text-7xl cursor-crosshair">
+          zodrax
+        </h1>
+        <h2
+          class="text-sm text-amber-400 md:text-base lg:text-lg animate-pulse cursor-crosshair"
+        >
+          Veshant Singh Dahiya
+        </h2>
       </div>
-      <div class="rhead">
-        <div class="item">🌐EN</div>
-        <div class="item">👤Account</div>
+      <div class="w-fit mx-auto animate-bounce border rounded-full opacity-60">
+        <span class="material-symbols-outlined p-2"> expand_more </span>
       </div>
-    </header>
+    </section>
     <section>
-      <div class="part1">
-        <span class="logo" id="logo2">Loot</span>
-        <span id="logotext">Plunder your way out</span>
-        <button id="join">join</button>
+      <div class="border-8 border-emerald-500 rounded-2xl m-auto my-40
+       w-5/6">
+        <h2 class="text-2xl flex justify-center mt-10 text-emerald-200" >Who am i ?</h1>
+          <div class="text-lg  mt-5  p-5 font-serif lg:p-14 lg:mt-0">
+            <p >Not to brag or anything but i am a pretty great person but most importantly, the person who can help you get digital presence, personal portfolio or a custom build web app from scratch.</p>
+            <p class="mt-3">Other than that i am a WebDev, Gammer, Computer science student, Otaku, Fantasizer and a lot, but to know more about me don't you think it's polite to tell a little about yourself first so head down to <span>contact</span> section without futher ado.</p>
+          </div>
       </div>
-      <div class="part2">
-        <div class="p2item">
-          <img
-            src="https://resource.logitechg.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/homepage/static-hpb/g502x-hpb-tablet-1152.png?v=1"
-            alt="mouse"
-            width="386"
-            height="386"
-          />
-          <h2>ICON. REINVENTED.</h2>
-          <p>
-            Legendary G502 design reinvented with breakthrough gaming
-            technology.
-          </p>
+    </section>
+    <section>
+      <h2 class="flex justify-center text-2xl text-emerald-200 mb-20">◈◇----- Skills -----◇◈</h2>
+      <div class="flex justify-around mb-40">  
+        <div class="text-stone-300">  
+          <h2 class="my-5">Web Development  </h2>
+          <h2 class="my-5">Game Development </h2>
+          <h2 class="my-5">Basic Programming</h2>
+          <h2 class="my-5">Data structures  </h2>
+          <h2 class="my-5">Algorithms       </h2>
+          <h2 class="my-5">Binge watching   </h2>
         </div>
-        <div class="p2item">
-          <img
-            src="https://rukminim1.flixcart.com/image/416/416/l1mh7rk0/gaming-chair/i/s/x/gaming-chair-ergonomic-seat-with-headrest-leather-gaming-chair-original-imagd55esqgfpzvc.jpeg?q=70"
-            alt="mouse"
-            width="386"
-            height="386"
-          />
-          <h2>ZERO OPPOSITION</h2>
-          <p>The weapon of choice for the world's best esports players.</p>
-        </div>
-        <div class="p2item">
-          <img
-            src="https://img.freepik.com/premium-photo/gamer-playing-desktop-pc-computer-gaming-illustration_691560-5611.jpg?w=2000"
-            alt="mouse"
-            width="386"
-            height="386"
-          />
-          <h2>PLAY YOUR WAY</h2>
-          <p>Meet the aurora collection.</p>
+        <div>  
+          <div class="my-5"> <span class="text-emerald-300">◈◈◈</span><span>◇◇</span></div>
+          <div class="my-5"> <span class="text-emerald-300">◈◈</span><span>◇◇◇</span></div>
+          <div class="my-5"> <span class="text-emerald-300">◈◈◈◈◈</span></div>
+          <div class="my-5"> <span class="text-emerald-300">◈◈◈</span><span>◇◇</span></div>
+          <div class="my-5"> <span class="text-emerald-300">◈◈</span><span>◇◇◇</span></div>
+          <div class="my-5"> <span class="text-emerald-300">◈◈◈◈◈◈</span></div>
         </div>
       </div>
     </section>
     <section>
-      <div class="part3">
-        <h1>ADVANCED GAMING GEAR</h1>
-        <p>
-          Play at your peak with the highest performance gaming equipment from
-          our team.
-        </p>
-        <div class="container">
-          <div class="card">
-            <h3 class="title">item 1</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
-          </div>
-          <div class="card">
-            <h3 class="title">item 2</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
-          </div>
-          <div class="card">
-            <h3 class="title">item 3</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
-          </div>
-          <div class="card">
-            <h3 class="title">item 4</h3>
-            <div class="bar">
-              <div class="emptybar"></div>
-              <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle class="stroke" cx="60" cy="60" r="50" />
-              </svg>
-            </div>
-          </div>
+      <h2 class="flex justify-center text-2xl text-emerald-200 mb-20">Contact</h2>
+      <div class="flex justify-center mb-96">
+        <div>
+          <h2 class="text-stone-200 mb-5">Email - <span class="text-emerald-300">veshantdahiya@gmail.com</span></h2>
+          <h2 class="text-stone-200 mb-5">Telegram - <span class="text-emerald-300">@zodrax</span></h2>
+          <h2 class="text-stone-200 mb-5">Discord - <span class="text-emerald-300">veshant</span></h2>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="part4" id="part41">
-        <h2>THERE'S LEVELS TO PLAY</h2>
-        <p>
-          We all play. In our way. For our own reasons. And that’s what makes
-          this
-        </p>
-        <p>
-          community we’ve built together so amazing. More than levels in games,
-          there’s
-        </p>
-        <p>levels to all of us. And where we go next, is up to us.</p>
-        <button>Explore</button>
       </div>
     </section>
     <footer>
-      <p>© 2023 Loot. All rights reserved</p>
-      <span>BY ZODRAX</span>
+      <div class="text-emerald-200 flex justify-center text-sm m-5"> Copyright © 2023 Zodrax </div>
     </footer>
   </body>
 </html>
