@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Playfair+Display&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="shortcut icon" href="img/v_white.png" type="image/x-icon" />
+    <title>VSD</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: rgb(231 229 228);
+      }
+      /* Style the main scrollbar */
+      body::-webkit-scrollbar {
+        width: 12px;
+      }
+      /* Style the thumb (the draggable part) */
+      body::-webkit-scrollbar-thumb {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      /* Style the track (the part that is not draggable) */
+      body::-webkit-scrollbar-track {
+        background: black;
+      }
+      body {
+        overflow-x: hidden;
+        user-select: none;
+        background-color: black;
+        --tw-text-opacity: 1;
+        color: rgb(231 229 228 / var(--tw-text-opacity));
+      }
+      .landing {
+        background-image: url(img/bg.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem /* 16px */;
+      }
+      .logo {
+        width: 10%;
+        cursor: crosshair;
+      }
+      @media (min-width: 640px) {
+        .logo {
+          width: 5%;
+        }
+      }
+      @media (min-width: 1024px) {
+        .logo {
+          width: 4%;
+        }
+      }
+      @media (min-width: 1280px) {
+        .logo {
+          width: 3%;
+        }
+      }
+      .logo:hover {
+        animation: spin 1s linear infinite;
+      }
+      button {
+        background-color: transparent;
+        background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(52 211 153 / var(--tw-text-opacity));
+        font-weight: 600;
+        padding-top: 0.5rem /* 8px */;
+        padding-bottom: 0.5rem /* 8px */;
+        padding-left: 1rem /* 16px */;
+        padding-right: 1rem /* 16px */;
+        border-width: 1px;
+        --tw-border-opacity: 1;
+        border-color: rgb(52 211 153 / var(--tw-border-opacity));
+        border-radius: 9999px;
+        cursor: not-allowed;
+      }
+      button:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+      .menu {
+        background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+
+        margin-top: auto;
+        margin-bottom: auto;
+        --tw-text-opacity: 1;
+        color: rgb(52 211 153 / var(--tw-text-opacity));
+      }
+      .part1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 13rem;
+      }
+      @media (min-width: 1280px) {
+        .part1 {
+          margin-top: 11rem /* 176px */;
+        }
+      }
+      .title {
+        font-family: "Playfair Display", serif;
+        font-size: 3.75rem /* 60px */;
+        line-height: 1;
+        --tw-text-opacity: 1;
+        color: rgb(52 211 153 / var(--tw-text-opacity));
+        cursor: crosshair;
+      }
+      @media (min-width: 768px) {
+        .title {
+          font-size: 3.75rem /* 60px */;
+          line-height: 1;
+        }
+      }
+      @media (min-width: 1024px) {
+        .title {
+          font-size: 4.5rem /* 72px */;
+          line-height: 1;
+        }
+      }
+      .subTitle {
+        font-family: "Orbitron", sans-serif;
+        font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+        --tw-text-opacity: 1;
+        color: rgb(251 191 36 / var(--tw-text-opacity));
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        cursor: crosshair;
+        margin-bottom: 20rem;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+      @media (min-width: 768px) {
+        .subTitle {
+          font-size: 1rem /* 16px */;
+          line-height: 1.5rem /* 24px */;
+        }
+      }
+      @media (min-width: 1024px) {
+        .subTitle {
+          font-size: 1.125rem /* 18px */;
+          line-height: 1.75rem /* 28px */;
+        }
+      }
+      .expand {
+        cursor: crosshair;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        animation: bounce 1s infinite;
+        border: 1px solid white;
+        border-radius: 9999px;
+        opacity: 0.6;
+      }
+      .expandIcon {
+        padding: 0.5rem /* 8px */;
+      }
+      .expandIcon:hover {
+        animation: spin 1s linear infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+          transform: none;
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+      }
+      .part2 {
+        border: 8px solid rgb(16 185 129);
+        border-style: groove;
+        border-radius: 1rem;
+        margin: auto;
+        margin-top: 10rem /* 160px */;
+        margin-bottom: 10rem /* 160px */;
+        width: 83.333333%;
+      }
+      .heading {
+        font-size: 1.5rem /* 24px */;
+        line-height: 2rem /* 32px */;
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem /* 40px */;
+        --tw-text-opacity: 1;
+        color: rgb(167 243 208 / var(--tw-text-opacity));
+      }
+      .about {
+        font-size: 1.125rem /* 18px */;
+        line-height: 1.75rem /* 28px */;
+        margin-top: 1.25rem /* 20px */;
+        padding: 1.25rem /* 20px */;
+        font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      @media (min-width: 1024px) {
+        .about {
+          padding: 3.5rem /* 56px */;
+        }
+      }
+      @media (min-width: 1024px) {
+        .about {
+          margin-top: 0px;
+        }
+      }
+      p {
+        padding: 0.5rem;
+      }
+      .skillBox {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10rem;
+        margin-top: 5rem;
+        font-family: "Raleway", sans-serif;
+        font-size: 1.2rem;
+        line-height: 3rem;
+      }
+      .textGreen {
+        --tw-text-opacity: 1;
+        color: rgb(110 231 183 / var(--tw-text-opacity));
+      }
+      .contact {
+        margin-bottom: 1.25rem /* 20px */;
+      }
+      .part4 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24rem /* 384px */;
+        font-size: 1.4rem /* 24px */;
+      }
+      .p4heading {
+        margin-bottom: 5rem /* 80px */;
+      }
+      .copyright {
+        display: flex;
+        justify-content: center;
+        --tw-text-opacity: 1;
+        color: rgb(167 243 208);
+        margin: 1.25rem /* 20px */;
+        font-size: 0.875rem /* 14px */;
+        line-height: 1.25rem /* 20px */;
+      }
+      .shrink {
+        transition: all 0.2s ease-in-out;
+      }
+      .shrink:hover {
+        transform: scale(0.9);
+      }
+      .grow {
+        transition: all 0.2s ease-in-out;
+      }
+      .grow:hover {
+        transform: scale(1.1);
+      }
+      .spin {
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landing">
+      <header>
+        <div class="logo shrink">
+          <img
+            src="img/v_white.png"
+            alt="logoImg"
+            width="100%"
+            onclick="location.href='./index.html'"
+          />
+        </div>
+        <div class="menu shrink">
+          <button type="button">
+            <span class="material-symbols-rounded"> menu </span>
+          </button>
+        </div>
+      </header>
+      <section class="part1">
+        <div class="title grow">zodrax</div>
+        <div class="subTitle grow">Veshant Singh Dahiya</div>
+        <div class="expand">
+          <span class="material-symbols-outlined expandIcon">
+            expand_more
+          </span>
+        </div>
+      </section>
+    </div>
+    <section class="part2">
+      <div class="heading grow">Who am i ?</div>
+      <div class="about">
+        <p>
+          Not to brag or anything but i am a pretty great person but most
+          importantly, the person who can help you get digital presence,
+          personal portfolio or a custom build web app from scratch.
+        </p>
+        <p>
+          Other than that i am a WebDev, Gammer, Computer science student,
+          Otaku, Fantasizer and a lot, but to know more about me don't you think
+          it's polite to tell a little about yourself first so head down to
+          <a href="#contact">contact</a> section without futher ado.
+        </p>
+      </div>
+    </section>
+    <section class="part3">
+      <div class="heading grow">◈◇----- Skills -----◇◈</div>
+      <div class="skillBox">
+        <div class="boxleft">
+          <div class="shrink">Web Development</div>
+          <div class="shrink">Game Development</div>
+          <div class="shrink">Basic Programming</div>
+          <div class="shrink">Data structures</div>
+          <div class="shrink">Algorithms</div>
+          <div class="shrink">Binge watching</div>
+        </div>
+        <div class="boxRight">
+          <div><span class="textGreen">◈◈◈</span>◇◇</div>
+          <div><span class="textGreen">◈◈</span>◇◇◇</div>
+          <div><span class="textGreen">◈◈◈◈◈</span></div>
+          <div><span class="textGreen">◈◈◈</span>◇◇</div>
+          <div><span class="textGreen">◈◈</span>◇◇◇</div>
+          <div><span class="textGreen">◈◈◈◈◈</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="part4" id="contact">
+      <div class="contactBox">
+        <div class="heading p4heading grow">----- Contact -----</div>
+        <div class="contact shrink">
+          Email - <span class="textGreen">veshantdahiya@gmail.com</span>
+        </div>
+        <div class="contact shrink">
+          Telegram - <span class="textGreen">@zodrax</span>
+        </div>
+        <div class="contact shrink">
+          Discord - <span class="textGreen">veshant</span>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="copyright grow">Copyright © 2023 Zodrax</div>
+    </footer>
+  </body>
+</html>
